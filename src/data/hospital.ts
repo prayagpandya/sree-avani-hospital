@@ -1,7 +1,7 @@
 /**
  * SINGLE SOURCE OF TRUTH for all hospital information.
  * Replace the PLACEHOLDER values below with the hospital's verified details.
- * NOTE: the address must never contain the phrase "Opp Medplus".
+ * NOTE: keep the address limited to the verified hospital details.
  */
 
 export const hospital = {
@@ -22,8 +22,8 @@ export const hospital = {
    * While a value is an empty string, the site renders a clearly marked placeholder.
    */
   assets: {
-    logoUrl: '',
-    locationQrUrl: '',
+    logoUrl: '/avani_logo.jpeg',
+    locationQrUrl: '/qr%20code.jpeg',
     buildingUrl: "/b66e4e8a-bb33-45f3-ad21-844465b3eb09.jpg"
 
   },
@@ -38,9 +38,15 @@ export const hospital = {
     email: '[HOSPITAL EMAIL ADDRESS]'
   },
 
-  /** Address — PLACEHOLDER. Use only the final verified address. */
+  /** Verified hospital address. */
   address: {
-    lines: ['[FINAL VERIFIED HOSPITAL ADDRESS]', '[CITY, STATE — PIN CODE]'],
+    lines: [
+      'D.No. 102-7-268/1',
+      'Balajipeta Road',
+      'Near Nayara Petrol Bunk',
+      'Bommuru',
+      'Rajamahendravaram - 533124'
+    ],
     mapsUrl: '' // configurable Google Maps link
   },
 
@@ -61,9 +67,7 @@ export const navLinks = [
 { label: 'About Us', to: '/about' },
 { label: 'Treatments', to: '/treatments' },
 { label: 'Doctor', to: '/doctor' },
-{ label: 'Facilities', to: '/about#facilities' },
 { label: 'Gallery', to: '/gallery' },
-{ label: 'Patient Stories', to: '/#patient-stories' },
 { label: 'Contact', to: '/contact' }];
 
 

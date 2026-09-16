@@ -11,7 +11,6 @@ const siteLinks = [
 { label: 'About Us', to: '/about' },
 { label: 'Treatments', to: '/treatments' },
 { label: 'Doctor', to: '/doctor' },
-{ label: 'Facilities', to: '/about#facilities' },
 { label: 'Gallery', to: '/gallery' },
 { label: 'Contact', to: '/contact' }];
 
