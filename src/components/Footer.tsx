@@ -103,10 +103,10 @@ export function Footer() {
                 <MessageCircleIcon className="mt-0.5 h-4 w-4 shrink-0 text-gold-400" aria-hidden="true" />
                 {hasWhatsapp() ?
                 <a href={waHref()} target="_blank" rel="noreferrer" className="hover:text-gold-400">
-                    WhatsApp the hospital
+                    {hospital.contact.phoneDisplay}
                   </a> :
 
-                <span>WhatsApp — [NUMBER TO BE ADDED]</span>
+                null
                 }
               </li>
               <li className="flex gap-3">

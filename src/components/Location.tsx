@@ -62,10 +62,10 @@ export function Location() {
                   <dd className="mt-2 text-[0.95rem] text-ivory/80">
                     {hasWhatsapp() ?
                     <a href={waHref()} target="_blank" rel="noreferrer" className="hover:text-gold-400">
-                        Message the hospital
+                      {hospital.contact.phoneDisplay}
                       </a> :
 
-                    '[WHATSAPP NUMBER TO BE ADDED]'
+                    null
                     }
                   </dd>
                 </div>
@@ -96,7 +96,7 @@ export function Location() {
               {hasWhatsapp() &&
               <ButtonAnchor href={waHref()} variant="ghost">
                   <MessageCircleIcon className="h-4 w-4" aria-hidden="true" />
-                  WhatsApp
+                  {hospital.contact.phoneDisplay}
                 </ButtonAnchor>
               }
               {hasMaps() &&

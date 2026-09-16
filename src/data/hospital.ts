@@ -28,14 +28,14 @@ export const hospital = {
 
   },
 
-  /** Contact — PLACEHOLDERS. Replace with verified numbers before launch. */
+  /** Verified hospital contact number. */
   contact: {
-    phoneDisplay: '[HOSPITAL PHONE NUMBER]',
-    phoneHref: '', // e.g. '+919000000000'
-    whatsappNumber: '', // digits with country code only, e.g. '919000000000'
+    phoneDisplay: '888 694 22 88',
+    phoneHref: '8886942288',
+    whatsappNumber: '918886942288',
     whatsappMessage:
     "Hello Sree Avani Women's Hospital, I would like to enquire about an appointment.",
-    email: '[HOSPITAL EMAIL ADDRESS]'
+    email: 'dsumathidevi11@gmail.com'
   },
 
   /** Verified hospital address. */

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { CalendarCheckIcon, MessageCircleIcon, PhoneIcon, XIcon } from 'lucide-react';
+import { hospital } from '../data/hospital';
 import { hasPhone, hasWhatsapp, phoneHref, waHref } from '../utils/contact';
 
 /**
@@ -37,7 +38,7 @@ export function FloatingActions() {
             className="flex flex-col items-center gap-1 border-x border-plum-900/10 py-2.5 text-[0.68rem] font-medium tracking-wide text-plum-800">
             
             <MessageCircleIcon className="h-[1.05rem] w-[1.05rem]" aria-hidden="true" />
-            WhatsApp
+            {hospital.contact.phoneDisplay}
           </a>
           <Link
             to="/contact#appointment"
