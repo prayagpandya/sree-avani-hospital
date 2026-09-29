@@ -24,7 +24,7 @@ export const hospital = {
   assets: {
     logoUrl: '/avani_logo.jpeg',
     locationQrUrl: '/qr%20code.jpeg',
-    buildingUrl: "/b66e4e8a-bb33-45f3-ad21-844465b3eb09.jpg"
+    buildingUrl: '/hospital.jpeg'
 
   },
 
