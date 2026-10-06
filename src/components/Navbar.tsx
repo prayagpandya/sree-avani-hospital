@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { MenuIcon, PhoneIcon, XIcon } from 'lucide-react';
 import { Logo } from './ui/Logo';
@@ -48,14 +48,18 @@ export function Navbar() {
 
         <nav aria-label="Primary" className="hidden items-center gap-7 xl:flex">
           {navLinks.map((link) =>
-          <Link
+            <NavLink
             key={link.label}
             to={link.to}
-            className={`whitespace-nowrap text-[0.82rem] font-medium tracking-wide transition-colors duration-200 ease-premium ${linkTone}`}>
+              end={link.to === '/'}
+              className={({ isActive }) =>
+                `whitespace-nowrap text-[0.82rem] font-medium tracking-wide transition-colors duration-200 ease-premium ${
+                isActive ? (solid ? 'text-plum-800' : 'text-gold-400') : linkTone}`
+              }>
             
-              {link.label}
-            </Link>
-          )}
+                {link.label}
+            </NavLink>
+            )}
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
@@ -112,7 +116,9 @@ export function Navbar() {
             transition={{ duration: 0.28, ease: [0.23, 1, 0.32, 1] }}>
             
               <div className="flex items-center justify-between">
-                <Logo size="sm" />
+                <Link to="/" aria-label="Go to homepage" className="shrink-0">
+                  <Logo size="sm" />
+                </Link>
                 <button
                 type="button"
                 onClick={() => setOpen(false)}
@@ -127,14 +133,18 @@ export function Navbar() {
 
               <nav aria-label="Mobile" className="mt-6 flex flex-col">
                 {navLinks.map((link) =>
-              <Link
+                <NavLink
                 key={link.label}
                 to={link.to}
-                className="border-b border-plum-900/5 py-3.5 font-display text-xl text-plum-800">
+                  end={link.to === '/'}
+                  className={({ isActive }) =>
+                    `border-b border-plum-900/5 py-3.5 font-display text-xl ${
+                    isActive ? 'text-plum-900' : 'text-plum-800'}`
+                  }>
                 
-                    {link.label}
-                  </Link>
-              )}
+                      {link.label}
+                    </NavLink>
+                )}
               </nav>
 
               <div className="mt-auto flex flex-col gap-3 pt-8">

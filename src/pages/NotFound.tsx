@@ -4,7 +4,7 @@ import { ButtonLink } from '../components/ui/Buttons';
 import { useSeo } from '../utils/seo';
 
 export function NotFound() {
-  useSeo({ title: 'Page not found' });
+  useSeo({ title: 'Page not found', noindex: true });
 
   return (
     <>

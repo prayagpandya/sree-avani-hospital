@@ -21,7 +21,9 @@ export function Footer() {
       <div className="mx-auto max-w-[1280px] px-5 pb-24 pt-16 lg:px-8 lg:pb-10 lg:pt-20">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <Logo tone="light" size="lg" />
+            <Link to="/" aria-label="Go to homepage" className="inline-block">
+              <Logo tone="light" size="lg" />
+            </Link>
             <p className="mt-6 max-w-sm text-[0.9rem] leading-[1.8] text-ivory/65">
               {hospital.name} — {hospital.tagline}
             </p>
@@ -111,7 +113,9 @@ export function Footer() {
               </li>
               <li className="flex gap-3">
                 <MailIcon className="mt-0.5 h-4 w-4 shrink-0 text-gold-400" aria-hidden="true" />
-                <span>{hospital.contact.email}</span>
+                <a href={`mailto:${hospital.contact.email}`} className="hover:text-gold-400">
+                  {hospital.contact.email}
+                </a>
               </li>
             </ul>
 

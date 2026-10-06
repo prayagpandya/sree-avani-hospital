@@ -19,7 +19,8 @@ export function TreatmentDetailPage() {
   useSeo({
     title: treatment ? treatment.title : 'Treatment not found',
     description: treatment?.summary,
-    image: treatment?.image
+    image: treatment?.image,
+    noindex: !treatment
   });
 
   if (!treatment) {
