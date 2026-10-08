@@ -5,7 +5,7 @@ import { WhatsAppIcon } from './ui/WhatsAppIcon';
 import { Logo } from './ui/Logo';
 import { hospital } from '../data/hospital';
 import { activeTreatments } from '../data/treatments';
-import { hasQr, hasWhatsapp, waHref } from '../utils/contact';
+import { hasQr, hasWhatsapp, mapsHref, waHref } from '../utils/contact';
 
 const siteLinks = [
   { label: 'Home', to: '/' },
@@ -123,21 +123,29 @@ export function Footer() {
             </ul>
 
             <div className="mt-6 flex items-center gap-4">
-              <div className="flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-ivory">
-                {hasQr() ?
-                <img
-                  src={hospital.assets.locationQrUrl}
-                  alt={`QR code opening the location of ${hospital.name}`}
-                  className="h-full w-full object-contain p-1.5" /> :
-
-
-                <span className="px-2 text-center text-[0.55rem] font-medium leading-tight text-plum-900/50">
+              <div className="flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-ivory transition-transform hover:scale-105">
+                {hasQr() ? (
+                  <a
+                    href={mapsHref() || 'https://maps.app.goo.gl/fe7xQgFMk3M1J1e59'}
+                    target="_blank"
+                    rel="noreferrer"
+                    title="Click or scan to open Google Maps"
+                    className="flex h-full w-full items-center justify-center"
+                  >
+                    <img
+                      src={hospital.assets.locationQrUrl}
+                      alt={`QR code opening Google Maps location of ${hospital.name}`}
+                      className="h-full w-full object-contain p-1.5"
+                    />
+                  </a>
+                ) : (
+                  <span className="px-2 text-center text-[0.55rem] font-medium leading-tight text-plum-900/50">
                     LOCATION QR
                   </span>
-                }
+                )}
               </div>
               <p className="text-[0.75rem] leading-relaxed text-ivory/55">
-                Scan to open the hospital location on your phone.
+                Scan or tap to open location on Google Maps.
               </p>
             </div>
           </div>

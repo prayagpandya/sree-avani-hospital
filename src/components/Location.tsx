@@ -110,26 +110,32 @@ export function Location() {
 
           <Reveal index={1} className="lg:col-span-6">
             <div className="flex h-full flex-col items-center justify-center rounded-[1.75rem] bg-ivory p-6 text-center sm:p-12">
-              <div className="flex h-56 w-56 items-center justify-center overflow-hidden rounded-2xl border border-plum-900/10 bg-white p-3 sm:h-64 sm:w-64">
-                {hasQr() ?
-                <img
-                  src={hospital.assets.locationQrUrl}
-                  alt={`QR code that opens the location of ${hospital.name}`}
-                  className="h-full w-full object-contain" /> :
-
-
-                <span className="px-6 text-[0.78rem] leading-relaxed text-plum-900/45">
-                    Location QR code — add the supplied QR image to the hospital
-                    configuration and it appears here.
+              <div className="flex h-56 w-56 items-center justify-center overflow-hidden rounded-2xl border border-plum-900/10 bg-white p-3 sm:h-64 sm:w-64 transition-transform hover:scale-[1.02]">
+                {hasQr() ? (
+                  <a
+                    href={mapsHref() || 'https://maps.app.goo.gl/fe7xQgFMk3M1J1e59'}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex h-full w-full items-center justify-center"
+                    title="Click or scan to open Google Maps"
+                  >
+                    <img
+                      src={hospital.assets.locationQrUrl}
+                      alt={`QR code that opens Google Maps navigation for ${hospital.name}`}
+                      className="h-full w-full object-contain"
+                    />
+                  </a>
+                ) : (
+                  <span className="px-6 text-[0.78rem] leading-relaxed text-plum-900/45">
+                    Location QR code
                   </span>
-                }
+                )}
               </div>
               <p className="mt-7 font-display text-[1.6rem] leading-tight text-plum-800">
-                Scan to open location
+                Scan to open Google Maps
               </p>
               <p className="mt-2 max-w-xs text-[0.85rem] leading-[1.7] text-plum-900/55">
-                Open your phone camera and scan the code to navigate directly to the
-                hospital.
+                Scan this code or tap above to navigate directly to Sree Avani on Google Maps.
               </p>
               <span className="mt-7 h-px w-12 bg-gold-600" aria-hidden="true" />
             </div>

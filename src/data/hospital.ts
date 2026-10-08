@@ -17,7 +17,7 @@ export const hospital = {
    */
   assets: {
     logoUrl: '/avani_logo.jpeg',
-    locationQrUrl: '/qr%20code.jpeg',
+    locationQrUrl: '/qr-code.png',
     buildingUrl: '/hospital.jpeg'
   },
 
@@ -40,8 +40,7 @@ export const hospital = {
       'Bommuru',
       'Rajamahendravaram - 533124'
     ],
-    mapsUrl:
-      'https://maps.google.com/?q=Sree+Avani+Womens+Hospital+Balajipeta+Road+Near+Nayara+Petrol+Bunk+Bommuru+Rajamahendravaram+533124'
+    mapsUrl: 'https://maps.app.goo.gl/fe7xQgFMk3M1J1e59'
   },
 
   /** Hospital consultation and emergency care timings. */

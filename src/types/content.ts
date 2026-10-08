@@ -44,5 +44,7 @@ export interface Testimonial {
   treatment: string;
   quote: string;
   rating?: number;
+  date?: string;
+  source?: 'google' | 'direct';
   approved: boolean;
 }
