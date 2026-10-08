@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MailIcon, MapPinIcon, MessageCircleIcon, PhoneIcon } from 'lucide-react';
+import { MailIcon, MapPinIcon, PhoneIcon } from 'lucide-react';
+import { WhatsAppIcon } from './ui/WhatsAppIcon';
 import { Logo } from './ui/Logo';
 import { hospital } from '../data/hospital';
 import { activeTreatments } from '../data/treatments';
@@ -104,7 +105,7 @@ export function Footer() {
                 <span>{hospital.contact.phoneDisplay}</span>
               </li>
               <li className="flex gap-3">
-                <MessageCircleIcon className="mt-0.5 h-4 w-4 shrink-0 text-gold-400" aria-hidden="true" />
+                <WhatsAppIcon className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" brandColor={false} />
                 {hasWhatsapp() ?
                 <a href={waHref()} target="_blank" rel="noreferrer" className="hover:text-gold-400">
                     {hospital.contact.phoneDisplay}

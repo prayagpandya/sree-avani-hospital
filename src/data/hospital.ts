@@ -1,7 +1,5 @@
 /**
  * SINGLE SOURCE OF TRUTH for all hospital information.
- * Replace the PLACEHOLDER values below with the hospital's verified details.
- * NOTE: keep the address limited to the verified hospital details.
  */
 
 export const hospital = {
@@ -11,21 +9,16 @@ export const hospital = {
   seo: {
     title: "Sree Avani Women's Hospital | Women's Healthcare & Gynaecology",
     description:
-    "Sree Avani Women's Hospital provides compassionate women's healthcare including maternity, gynaecology, infertility and laparoscopic care."
+      "Sree Avani Women's Hospital provides compassionate women's healthcare including maternity, gynaecology, infertility and laparoscopic care."
   },
 
   /**
-   * BRAND ASSETS — drop the supplied files in here.
-   * logoUrl: the official Sree Avani logo (used as-supplied, never recoloured or cropped).
-   * locationQrUrl: the supplied location QR code image.
-   * buildingUrl: the supplied hospital building photograph.
-   * While a value is an empty string, the site renders a clearly marked placeholder.
+   * BRAND ASSETS
    */
   assets: {
     logoUrl: '/avani_logo.jpeg',
     locationQrUrl: '/qr%20code.jpeg',
     buildingUrl: '/hospital.jpeg'
-
   },
 
   /** Verified hospital contact number. */
@@ -34,7 +27,7 @@ export const hospital = {
     phoneHref: '8886942288',
     whatsappNumber: '918886942288',
     whatsappMessage:
-    "Hello Sree Avani Women's Hospital, I would like to enquire about an appointment.",
+      "Hello Sree Avani Women's Hospital, I would like to enquire about an appointment.",
     email: 'dsumathidevi11@gmail.com'
   },
 
@@ -47,29 +40,30 @@ export const hospital = {
       'Bommuru',
       'Rajamahendravaram - 533124'
     ],
-    mapsUrl: '' // configurable Google Maps link
+    mapsUrl:
+      'https://maps.google.com/?q=Sree+Avani+Womens+Hospital+Balajipeta+Road+Near+Nayara+Petrol+Bunk+Bommuru+Rajamahendravaram+533124'
   },
 
-  /** Timings are intentionally not stated. Replace with verified timings if approved. */
+  /** Hospital consultation and emergency care timings. */
   timings: {
-    note: 'Consultation timings are confirmed at the time of booking. Please call the hospital to confirm.'
+    note: 'Consultation Hours: Monday – Saturday: 10:00 AM – 2:00 PM & 5:30 PM – 8:30 PM. 24/7 Maternity & Emergency Care available.'
   },
 
-  /** Only add official, verified profiles. Empty by design. */
-  social: [] as {label: string;href: string;}[],
+  /** Official profiles. */
+  social: [] as { label: string; href: string }[],
 
   disclaimer:
-  'Information provided on this website is for general awareness and does not replace consultation with a qualified medical professional.'
+    'Information provided on this website is for general awareness and does not replace consultation with a qualified medical professional.'
 };
 
 export const navLinks = [
-{ label: 'Home', to: '/' },
-{ label: 'About Us', to: '/about' },
-{ label: 'Treatments', to: '/treatments' },
-{ label: 'Doctor', to: '/doctor' },
-{ label: 'Gallery', to: '/gallery' },
-{ label: 'Contact', to: '/contact' }];
-
+  { label: 'Home', to: '/' },
+  { label: 'About Us', to: '/about' },
+  { label: 'Treatments', to: '/treatments' },
+  { label: 'Doctor', to: '/doctor' },
+  { label: 'Gallery', to: '/gallery' },
+  { label: 'Contact', to: '/contact' }
+];
 
 export const whatsappLink = () => {
   const { whatsappNumber, whatsappMessage } = hospital.contact;

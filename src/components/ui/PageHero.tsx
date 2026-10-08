@@ -24,7 +24,7 @@ export function PageHero({
 
 }: {label?: string;title: string;intro?: string;crumbs?: Crumb[];image?: string;imageAlt?: string;}) {
   return (
-    <section className="relative isolate overflow-hidden bg-plum-800 pb-14 pt-28 lg:pb-20 lg:pt-36">
+    <section className="relative isolate overflow-hidden bg-plum-800 pb-12 pt-24 sm:pb-16 sm:pt-28 lg:pb-20 lg:pt-36">
       {image &&
       <>
           <img
@@ -41,7 +41,7 @@ export function PageHero({
         className="pointer-events-none absolute -right-32 -top-28 h-[26rem] w-[26rem] rounded-full border border-gold-600/20" />
       
 
-      <div className="mx-auto max-w-[1280px] px-5 lg:px-8">
+      <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
         {crumbs.length > 0 &&
         <nav aria-label="Breadcrumb">
             <ol className="flex flex-wrap items-center gap-2 text-[0.75rem] text-ivory/55">
@@ -66,7 +66,7 @@ export function PageHero({
           </nav>
         }
 
-        <div className="mt-7 max-w-3xl">
+        <div className="mt-6 max-w-3xl sm:mt-7">
           {label &&
           <Reveal>
               <p className="flex items-center gap-3 text-[0.72rem] font-medium tracking-[0.2em] text-gold-400">
@@ -76,7 +76,7 @@ export function PageHero({
             </Reveal>
           }
           <Reveal index={1}>
-            <h1 className="mt-5 font-display text-[2.4rem] leading-[1.08] text-ivory sm:text-[3rem] lg:text-[3.6rem]">
+            <h1 className="mt-4 font-display text-[2rem] leading-[1.08] text-ivory sm:mt-5 sm:text-[3rem] lg:text-[3.6rem]">
               {title}
             </h1>
           </Reveal>

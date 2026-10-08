@@ -13,7 +13,11 @@ interface LogoProps {
  * neutral typographic lockup stands in so layout and spacing are correct.
  */
 export function Logo({ tone = 'dark', size = 'md' }: LogoProps) {
-  const heights = { sm: 'h-12', md: 'h-16', lg: 'h-20' };
+  const heights = {
+    sm: 'h-9 sm:h-11',
+    md: 'h-11 sm:h-14 lg:h-16',
+    lg: 'h-14 sm:h-16 lg:h-20'
+  };
 
   if (hospital.assets.logoUrl) {
     return (

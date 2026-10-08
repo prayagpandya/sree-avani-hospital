@@ -50,7 +50,7 @@ export function Hero() {
 
           <motion.h1
             {...rise(0.12)}
-            className="mt-6 font-display text-[2.6rem] leading-[1.06] text-ivory sm:text-[3.4rem] lg:text-[4.1rem]">
+            className="mt-6 font-display text-[2.2rem] leading-[1.08] text-ivory sm:text-[3.2rem] lg:text-[4.1rem]">
             
             Compassionate care for every stage of{' '}
             <span className="italic text-gold-400">womanhood</span>
@@ -58,18 +58,18 @@ export function Hero() {
 
           <motion.p
             {...rise(0.2)}
-            className="mt-7 max-w-xl text-[1rem] leading-[1.8] text-ivory/70">
+            className="mt-6 max-w-xl text-[0.98rem] leading-[1.8] text-ivory/80 sm:mt-7">
             
             At Sree Avani Women&apos;s Hospital we combine experienced medical
             expertise with compassionate, personalised care for women through
             every stage of life.
           </motion.p>
 
-          <motion.div {...rise(0.28)} className="mt-9 flex flex-wrap gap-3">
-            <ButtonLink to="/appointment" variant="gold" className="px-7 py-3.5">
+          <motion.div {...rise(0.28)} className="mt-8 flex flex-col sm:flex-row flex-wrap gap-3 sm:mt-9">
+            <ButtonLink to="/appointment" variant="gold" className="w-full sm:w-auto px-7 py-3.5 text-center">
               Book an Appointment
             </ButtonLink>
-            <ButtonLink to="/treatments" variant="ghost" className="px-7 py-3.5">
+            <ButtonLink to="/treatments" variant="ghost" className="w-full sm:w-auto px-7 py-3.5 text-center">
               Explore Treatments
               <ArrowRightIcon className="h-4 w-4" aria-hidden="true" />
             </ButtonLink>

@@ -36,3 +36,13 @@ export interface GalleryImage {
   /** Set true for the supplied/actual hospital photographs. */
   wide?: boolean;
 }
+
+export interface Testimonial {
+  id: number;
+  name: string;
+  location?: string;
+  treatment: string;
+  quote: string;
+  rating?: number;
+  approved: boolean;
+}

@@ -21,25 +21,25 @@ export function Facilities() {
               </div>
             </Reveal>
             <Reveal index={1}>
-              <h2 className="mt-4 max-w-xl font-display text-[2.4rem] font-normal leading-[1.06] text-[#17372d] sm:text-[3rem] lg:text-[3.8rem]">
+              <h2 className="mt-4 max-w-xl font-display text-[2rem] font-normal leading-[1.08] text-plum-800 sm:text-[3rem] lg:text-[3.8rem]">
                 A hospital built for comfort and privacy
               </h2>
             </Reveal>
             <Reveal index={2}>
-              <p className="mt-5 max-w-xl text-[0.98rem] leading-[1.7] text-[#292b28]/70">
+              <p className="mt-4 max-w-xl text-[0.95rem] leading-[1.7] text-plum-900/70 sm:mt-5 sm:text-[0.98rem]">
                 From the reception to the patient rooms, the hospital is arranged so that a visit feels calm and private at every step.
               </p>
             </Reveal>
           </div>
 
           <Reveal index={2} className="lg:col-span-6">
-            <div className="grid grid-cols-2 gap-x-6 border-l border-[#17372d]/15 pl-6 sm:gap-x-10 sm:pl-8">
-              <ul className="space-y-2.5 text-[0.8rem] leading-[1.45] text-[#34584b] sm:text-[0.86rem]">
+            <div className="grid grid-cols-2 gap-x-6 border-l border-plum-900/15 pl-6 sm:gap-x-10 sm:pl-8">
+              <ul className="space-y-2.5 text-[0.8rem] leading-[1.45] text-plum-900/75 sm:text-[0.86rem]">
                 {facilityNotes.slice(0, 4).map((note) =>
                 <li key={note}>{note}</li>
                 )}
               </ul>
-              <ul className="space-y-2.5 border-l border-[#17372d]/15 pl-6 text-[0.8rem] leading-[1.45] text-[#34584b] sm:pl-10 sm:text-[0.86rem]">
+              <ul className="space-y-2.5 border-l border-plum-900/15 pl-6 text-[0.8rem] leading-[1.45] text-plum-900/75 sm:pl-10 sm:text-[0.86rem]">
                 {facilityNotes.slice(4).map((note) =>
                 <li key={note}>{note}</li>
                 )}
@@ -59,11 +59,11 @@ export function Facilities() {
                 alt={featured.alt}
                 loading="lazy"
                 className="h-full w-full object-cover object-center transition-transform duration-500 ease-premium group-hover:scale-[1.03]" />
-              <span className="absolute inset-x-0 bottom-0 bg-[#17372d]/95 px-5 py-4 text-[#f8f5ed] sm:px-6 sm:py-5">
+              <span className="absolute inset-x-0 bottom-0 bg-plum-900/95 px-5 py-4 text-ivory sm:px-6 sm:py-5">
                 <span className="block font-display text-[1.35rem] sm:text-[1.55rem]">
                   {featured.category}
                 </span>
-                <span className="mt-1 block text-[0.78rem] text-[#f8f5ed]/70">
+                <span className="mt-1 block text-[0.78rem] text-ivory/70">
                   Tap to view larger <span aria-hidden="true">&#8594;</span>
                 </span>
               </span>
@@ -76,7 +76,7 @@ export function Facilities() {
                 <button
                 type="button"
                 onClick={() => setOpen(i + 1)}
-                className="group block h-[220px] w-full overflow-hidden rounded-[10px] bg-white text-left sm:h-[250px] lg:h-[260px]">
+                className="group block h-[220px] w-full overflow-hidden rounded-[10px] bg-white text-left shadow-soft sm:h-[250px] lg:h-[260px]">
                   <span className="block h-[178px] overflow-hidden sm:h-[205px] lg:h-[215px]">
                     <img
                     src={image.src}
@@ -84,7 +84,7 @@ export function Facilities() {
                     loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-500 ease-premium group-hover:scale-[1.05]" />
                   </span>
-                  <span className="flex h-[42px] items-center px-4 font-display text-[1rem] text-[#17372d] sm:h-[45px]">
+                  <span className="flex h-[42px] items-center px-4 font-display text-[1rem] text-plum-800 sm:h-[45px]">
                     {image.category}
                   </span>
                 </button>

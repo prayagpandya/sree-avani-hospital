@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle2Icon, MessageCircleIcon, SendIcon } from 'lucide-react';
+import { CheckCircle2Icon, SendIcon } from 'lucide-react';
+import { WhatsAppIcon } from './ui/WhatsAppIcon';
 import { SectionHeading } from './ui/SectionHeading';
 import { Reveal } from './ui/Reveal';
 import { Button } from './ui/Buttons';
@@ -150,8 +151,8 @@ export function Appointment({
 
   return (
     <section id={id} className="scroll-mt-28 bg-ivory">
-      <div className="mx-auto max-w-[1280px] px-5 py-20 lg:px-8 lg:py-28">
-        <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+      <div className="mx-auto max-w-[1280px] px-4 py-12 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
+        <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
             {showHeading && (
               <SectionHeading
@@ -164,7 +165,7 @@ export function Appointment({
             <Reveal index={3}>
               <div className="mt-8 space-y-4">
                 <div className="flex items-start gap-3 rounded-xl border border-gold-600/20 bg-white p-4 shadow-soft">
-                  <MessageCircleIcon className="mt-0.5 h-5 w-5 shrink-0 text-gold-600" aria-hidden="true" />
+                  <WhatsAppIcon className="mt-0.5 h-5 w-5 shrink-0" brandColor />
                   <p className="text-[0.82rem] leading-relaxed text-plum-900/75">
                     Submitting opens WhatsApp with your pre-filled, formatted consultation request ready to send to our official hospital desk.
                   </p>
@@ -186,7 +187,7 @@ export function Appointment({
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3, ease: [0.23, 1, 0.32, 1] }}
                 role="status"
-                className="flex flex-col items-start rounded-2xl bg-white p-8 shadow-soft sm:p-10"
+                className="flex flex-col items-start rounded-2xl bg-white p-6 shadow-soft sm:p-10"
               >
                 <div className="flex h-14 w-14 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
                   <CheckCircle2Icon className="h-8 w-8 text-gold-600" aria-hidden="true" />
@@ -205,7 +206,7 @@ export function Appointment({
                     rel="noreferrer"
                     className="inline-flex items-center gap-2 rounded-full bg-gold-600 px-6 py-3 text-sm font-semibold text-plum-900 shadow-soft transition-all duration-200 hover:bg-gold-400"
                   >
-                    <MessageCircleIcon className="h-4 w-4" aria-hidden="true" />
+                    <WhatsAppIcon className="h-4 w-4" brandColor />
                     Open WhatsApp Now
                   </a>
                   <Button
@@ -224,7 +225,7 @@ export function Appointment({
                 <form
                   onSubmit={onSubmit}
                   noValidate
-                  className="rounded-2xl bg-white p-6 shadow-soft sm:p-9"
+                  className="rounded-2xl bg-white p-5 shadow-soft sm:p-9"
                 >
                   <div className="grid gap-5 sm:grid-cols-2">
                     <Field
@@ -325,7 +326,7 @@ export function Appointment({
 
                   <div className="mt-7 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
                     <Button type="submit" variant="gold" className="w-full sm:w-auto sm:px-8">
-                      <SendIcon className="h-4 w-4" aria-hidden="true" />
+                      <WhatsAppIcon className="h-4 w-4" brandColor />
                       Send via WhatsApp
                     </Button>
                     <span className="text-[0.78rem] text-plum-900/55">

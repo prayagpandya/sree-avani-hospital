@@ -17,8 +17,7 @@ import { NotFound } from './pages/NotFound';
 
 interface AppProps {
   /**
-   * Patient stories currently hold consent placeholders. Turn this off to hide
-   * the section entirely until approved testimonials are supplied.
+   * Set to false to hide the patient stories section if needed.
    */
   showPatientStories?: boolean;
 }
@@ -29,7 +28,7 @@ export function App({ showPatientStories = true }: AppProps) {
       <ScrollManager />
       <div className="flex min-h-screen w-full flex-col bg-ivory">
         <Navbar />
-        <main className="flex-1 pb-16 lg:pb-0">
+        <main className="flex-1 pb-24 lg:pb-0">
           <Routes>
             <Route path="/" element={<Home showPatientStories={showPatientStories} />} />
             <Route path="/about" element={<AboutPage />} />
