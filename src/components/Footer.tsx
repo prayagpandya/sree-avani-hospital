@@ -7,12 +7,14 @@ import { activeTreatments } from '../data/treatments';
 import { hasQr, hasWhatsapp, waHref } from '../utils/contact';
 
 const siteLinks = [
-{ label: 'Home', to: '/' },
-{ label: 'About Us', to: '/about' },
-{ label: 'Treatments', to: '/treatments' },
-{ label: 'Doctor', to: '/doctor' },
-{ label: 'Gallery', to: '/gallery' },
-{ label: 'Contact', to: '/contact' }];
+  { label: 'Home', to: '/' },
+  { label: 'About Us', to: '/about' },
+  { label: 'Treatments', to: '/treatments' },
+  { label: 'Doctor', to: '/doctor' },
+  { label: 'Gallery', to: '/gallery' },
+  { label: 'Contact', to: '/contact' },
+  { label: 'Book Appointment', to: '/appointment' }
+];
 
 
 export function Footer() {

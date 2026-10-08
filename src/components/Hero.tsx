@@ -66,7 +66,7 @@ export function Hero() {
           </motion.p>
 
           <motion.div {...rise(0.28)} className="mt-9 flex flex-wrap gap-3">
-            <ButtonLink to="/contact#appointment" variant="gold" className="px-7 py-3.5">
+            <ButtonLink to="/appointment" variant="gold" className="px-7 py-3.5">
               Book an Appointment
             </ButtonLink>
             <ButtonLink to="/treatments" variant="ghost" className="px-7 py-3.5">

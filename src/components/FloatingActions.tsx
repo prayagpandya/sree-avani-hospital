@@ -41,9 +41,8 @@ export function FloatingActions() {
             {hospital.contact.phoneDisplay}
           </a>
           <Link
-            to="/contact#appointment"
+            to="/appointment"
             className="flex flex-col items-center gap-1 bg-gold-600 py-2.5 text-[0.68rem] font-semibold tracking-wide text-plum-900">
-            
             <CalendarCheckIcon className="h-[1.05rem] w-[1.05rem]" aria-hidden="true" />
             Appointment
           </Link>

@@ -74,12 +74,11 @@ export function Navbar() {
             <PhoneIcon className="h-4 w-4" aria-hidden="true" />
             Call
           </a>
-          <a
-            href="/contact#appointment"
+          <Link
+            to="/appointment"
             className="inline-flex items-center rounded-full bg-gold-600 px-5 py-2.5 text-[0.8rem] font-semibold text-plum-900 shadow-soft transition-[background-color,transform] duration-200 ease-premium hover:-translate-y-0.5 hover:bg-gold-400">
-            
             Book Appointment
-          </a>
+          </Link>
         </div>
 
         <button
@@ -148,12 +147,12 @@ export function Navbar() {
               </nav>
 
               <div className="mt-auto flex flex-col gap-3 pt-8">
-                <a
-                href="/contact#appointment"
-                className="flex items-center justify-center rounded-full bg-gold-600 px-5 py-3.5 text-sm font-semibold text-plum-900">
-                
+                <Link
+                  to="/appointment"
+                  onClick={() => setOpen(false)}
+                  className="flex items-center justify-center rounded-full bg-gold-600 px-5 py-3.5 text-sm font-semibold text-plum-900">
                   Book Appointment
-                </a>
+                </Link>
                 <a
                 href={hasPhone() ? phoneHref() : '/contact'}
                 className="flex items-center justify-center gap-2 rounded-full border border-plum-900/15 px-5 py-3.5 text-sm font-medium text-plum-800">

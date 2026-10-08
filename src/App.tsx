@@ -11,6 +11,7 @@ import { TreatmentDetailPage } from './pages/TreatmentDetailPage';
 import { DoctorPage } from './pages/DoctorPage';
 import { GalleryPage } from './pages/GalleryPage';
 import { ContactPage } from './pages/ContactPage';
+import { AppointmentPage } from './pages/AppointmentPage';
 import { LegalPage } from './pages/LegalPage';
 import { NotFound } from './pages/NotFound';
 
@@ -37,6 +38,8 @@ export function App({ showPatientStories = true }: AppProps) {
             <Route path="/doctor" element={<DoctorPage />} />
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/appointment" element={<AppointmentPage />} />
+            <Route path="/book-appointment" element={<AppointmentPage />} />
             <Route path="/privacy" element={<LegalPage kind="privacy" />} />
             <Route path="/terms" element={<LegalPage kind="terms" />} />
             <Route path="*" element={<NotFound />} />

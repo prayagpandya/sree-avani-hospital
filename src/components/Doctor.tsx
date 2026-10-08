@@ -63,7 +63,7 @@ export function Doctor() {
 
             <Reveal index={4}>
               <div className="mt-11 flex flex-wrap gap-3">
-                <ButtonLink to="/contact#appointment" variant="primary">
+                <ButtonLink to="/appointment" variant="primary">
                   Book Consultation
                 </ButtonLink>
                 <ButtonLink to="/doctor" variant="outline">
