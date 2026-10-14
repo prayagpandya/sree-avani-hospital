@@ -35,7 +35,7 @@ export function About({ withCta = true }: {withCta?: boolean;}) {
                   src={hospital.assets.buildingUrl}
                   alt={`The ${hospital.name} building`}
                   loading="lazy"
-                  className="aspect-[4/3] w-full object-cover" />
+                  className="aspect-[4/3] sm:aspect-square lg:aspect-[4/5] max-h-[540px] w-full object-cover object-center" />
                 
               </div>
               <div
